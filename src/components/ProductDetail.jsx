@@ -53,7 +53,7 @@ const ProductDetail = () => {
         }
       });
       
-      // Optional: Show a success message or notification
+      
       alert('Product added to cart!');
     }
   };

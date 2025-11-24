@@ -11,19 +11,16 @@ const Home = () => {
   const { state } = useApp();
   const { products, loading, categories, fetchProducts, loadMore, hasMore } = useProducts();
 
-  // Fetch products when filters change
   useEffect(() => {
     fetchProducts(true);
   }, [state.searchQuery, state.barcodeQuery, state.selectedCategory]);
 
-  // Load more products when page changes
   useEffect(() => {
     if (state.page > 1) {
       fetchProducts(false);
     }
   }, [state.page]);
 
-  // Infinite scroll handler
   const handleScroll = useCallback(() => {
     if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || loading) {
       return;
@@ -39,9 +36,9 @@ const Home = () => {
   }, [handleScroll]);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors ">
-      <div className="max-w-9xl mx-auto px-4 py-8 justify-content-center">
-        <header className="text-center mb-8">
+    // <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors ">
+      <div className="max-w-9xl mx-auto px-4 py-8  ">
+        <header className="text-center mb-8 mx-5">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-800 dark:text-gray-100 mb-2">
             Food Product Explorer
           </h1>
@@ -50,7 +47,6 @@ const Home = () => {
           </p>
         </header>
 
-        {/* Search + Filters row */}
         <div className="flex flex-col-reverse md:flex-row md:items-center md:justify-between gap-4 mb-6">
           <div className="flex-1">
             <SearchBar />
@@ -102,7 +98,7 @@ const Home = () => {
           </>
         )}
       </div>
-    </div>
+    // </div>
   );
 };
 
