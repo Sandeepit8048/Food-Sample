@@ -1,18 +1,82 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🍕 Food Product Explorer
+A modern React application for exploring nutritional information about various food products using the Open Food Facts API.
 
-Currently, two official plugins are available:
+https://img.shields.io/badge/React-18.2.0-blue 
+https://img.shields.io/badge/State%2520Management-Context%2520API-green
+https://img.shields.io/badge/Styling-Tailwind%2520CSS-38B2AC
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌟 Live Demo
+Deployed Application: https://food-sample.vercel.app/
 
-## React Compiler
+📋 Table of Contents
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Features
+Tech Stack
+Project Structure
+Installation
+Available Scripts
+Usage
+API Integration
+State Management
+Components
+Deployment
+Contributing
 
-Note: This will impact Vite dev & build performances.
+✨ Features
 
-## Expanding the ESLint configuration
+🔍 Product Search: Search food products by name
+🏷️ Category Filtering: Filter products by food categories
+📊 Nutritional Information: Detailed nutrition facts and grades
+🛒 Shopping Cart: Add products to cart functionality
+📱 Responsive Design: Mobile-first responsive layout
+🎨 Dark Mode Support: Toggle between light and dark themes
+📜 Infinite Scroll: Load more products as you scroll
+🏪 Product Details: Comprehensive product information pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🛠 Tech Stack
+Frontend Framework: React 18
+State Management: React Context API + useReducer
+Styling: Tailwind CSS
+Routing: React Router DOM
+API: Open Food Facts API
+Deployment: Vercel
+Icons: Heroicons (SVG)
+
+📁 Project Structure
+src/
+├── components/
+│   ├── FilterSort.js     # Category filter and sort options
+│   ├── LoadingSpinner.js # Loading indicator component
+│   ├── ProductCard.js    # Product card for listing view
+│   ├── ProductDetail.js  # Detailed product view
+│   └── SearchBar.js      # Search functionality
+├── context/
+│   └── AppContext.js     # Global state management
+├── hooks/
+│   └── useProducts.js    # Custom hook for product operations
+├── utils/
+│   └── api.js           # API service functions
+└── pages/
+    └── Home.js          # Main homepage component
+
+ 🚀 Installation
+
+1.Clone the repository
+  git clone [(https://github.com/Sandeepit8048/Food-Sample)]
+  cd Food-Sample
+
+2.Install dependencies
+  npm install
+
+3.Start the development server
+  npm start
+
+📜 Available Scripts
+npm start - Runs the app in development mode
+npm run build - Builds the app for production
+npm test - Launches the test runner
+npm run eject - Ejects from Create React App (one-way operation)
+
+
